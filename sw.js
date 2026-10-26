@@ -1,0 +1,1 @@
+const c='ca-v1';self.addEventListener('install',e=>e.waitUntil(caches.open(c).then(x=>x.addAll(['./','index.html','manifest.json','icon.svg']))));self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).catch(()=>caches.match(e.request))));
